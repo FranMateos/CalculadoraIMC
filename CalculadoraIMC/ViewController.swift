@@ -29,6 +29,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         sender.resignFirstResponder() // ocultar teclado
         
     }
+    
+    @IBAction func backgroundTap(sender:UIControl){
+        
+        peso.resignFirstResponder()
+        estatura.resignFirstResponder()
+        
+    }
     @IBAction func calcularIMC(_ sender: AnyObject) {
         
         var IMC:Double
