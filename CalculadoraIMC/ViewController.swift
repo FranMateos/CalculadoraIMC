@@ -4,7 +4,7 @@
 //
 //  Created by System Administrator on 6/8/17.
 //  Copyright © 2017 System Administrator. All rights reserved.
-//
+//  Ejemplo  de calculadora de IMC simple curso Universidad de Monterrey
 
 import UIKit
 
