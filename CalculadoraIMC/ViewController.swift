@@ -10,8 +10,10 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var estatura: UITextField!
     @IBOutlet weak var peso: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -19,9 +21,23 @@ class ViewController: UIViewController, UITextFieldDelegate {
         estatura.delegate=self
     }
 
+    // función que se lanza al editar un campo
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        // declaracion de variable punto como inicio
+        var punto:CGPoint
+        punto=CGPoint(x: 0, y: textField.frame.origin.y)
+        // se pasa el punto de origen al scroll
+        self.scroll.setContentOffset(punto, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    // función que se ejecuta al finalizar la edición
+    @IBAction func textFieldDidEndEditing(_ textField: UITextField) {
+        self.scroll.setContentOffset(CGPoint.zero, animated: true)
     }
     
     @IBAction func textFileDoneEditing(sender: UITextField){
