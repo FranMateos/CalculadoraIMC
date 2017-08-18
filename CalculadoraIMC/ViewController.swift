@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var scroll: UIScrollView!
     @IBOutlet weak var estatura: UITextField!
     @IBOutlet weak var peso: UITextField!
+    @IBOutlet weak var resultado: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         pesolocal=Double(self.peso.text!)!
         let estaturaLocal:Double=Double(self.estatura.text!)!
         IMC=pesolocal/(estaturaLocal*estaturaLocal)
+        self.resultado.text = String(IMC)
         print("Resultado: \(IMC) ")
         
     }

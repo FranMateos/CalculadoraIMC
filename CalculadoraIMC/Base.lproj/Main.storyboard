@@ -77,6 +77,13 @@
                                     <constraint firstItem="QoC-Bh-7CN" firstAttribute="centerX" secondItem="GWF-Db-kXd" secondAttribute="centerX" id="zxd-6Z-VmK"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aab-Q0-2Dy">
+                                <rect key="frame" x="119" y="362" width="127" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJa-L1-5L7">
                                 <rect key="frame" x="159" y="307" width="56" height="30"/>
                                 <state key="normal" title="Calcular"/>
@@ -113,7 +120,7 @@
         <!--View Controller-->
         <scene sceneID="tJG-dh-D7j">
             <objects>
-                <viewController id="dNl-qU-GKY" sceneMemberID="viewController">
+                <viewController id="dNl-qU-GKY" customClass="ViewController" customModule="CalculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I2f-Sh-ANH"/>
                         <viewControllerLayoutGuide type="bottom" id="h2v-ZG-sgF"/>
@@ -129,13 +136,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34f-pp-wCc">
+                                <rect key="frame" x="124" y="163" width="127" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="resultado" destination="aab-Q0-2Dy" id="ixR-IA-8ju"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lo-fq-fH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1720.8" y="36.431784107946029"/>
+            <point key="canvasLocation" x="1679" y="36"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fkf-q0-fI7">
