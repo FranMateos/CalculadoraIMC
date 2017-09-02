@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="964" y="35.532233883058474"/>
         </scene>
-        <!--View Controller-->
+        <!--Vista Resultados-->
         <scene sceneID="tJG-dh-D7j">
             <objects>
-                <viewController id="dNl-qU-GKY" customClass="ViewController" customModule="CalculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dNl-qU-GKY" customClass="VistaResultados" customModule="CalculadoraIMC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="I2f-Sh-ANH"/>
                         <viewControllerLayoutGuide type="bottom" id="h2v-ZG-sgF"/>
@@ -143,16 +143,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4VX-ai-WN1">
+                                <rect key="frame" x="136" y="163" width="103" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="resultado" destination="aab-Q0-2Dy" id="ixR-IA-8ju"/>
+                        <outlet property="resultadoIMC" destination="4VX-ai-WN1" id="sQz-Gd-tyf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2lo-fq-fH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1679" y="36"/>
+            <point key="canvasLocation" x="1677.5999999999999" y="35.532233883058474"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Fkf-q0-fI7">

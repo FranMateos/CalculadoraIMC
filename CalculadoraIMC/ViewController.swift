@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var estatura: UITextField!
     @IBOutlet weak var peso: UITextField!
     @IBOutlet weak var resultado: UILabel!
+    var res:Double = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    //funcion de paso de datos entre vistas
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resul=imc()
+        let siguienteVista=segue.destination as! VistaResultados
+        siguienteVista.indiceIM=resul
+    }
     // función que se ejecuta al finalizar la edición
     @IBAction func textFieldDidEndEditing(_ textField: UITextField) {
         self.scroll.setContentOffset(CGPoint.zero, animated: true)
@@ -55,13 +62,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     @IBAction func calcularIMC(_ sender: AnyObject) {
         
+        res = imc()
+        
+    }
+    
+    func imc()->Double{
+        
         var IMC:Double
         let pesolocal:Double
         pesolocal=Double(self.peso.text!)!
         let estaturaLocal:Double=Double(self.estatura.text!)!
         IMC=pesolocal/(estaturaLocal*estaturaLocal)
-        self.resultado.text = String(IMC)
+        /* self.resultado.text = String(IMC) */
         print("Resultado: \(IMC) ")
+        return IMC
         
     }
 
